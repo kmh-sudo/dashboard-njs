@@ -1,4 +1,5 @@
 import postgres from 'postgres';
+import LatestInvoices from '../ui/dashboard/latest-invoices';
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
@@ -11,6 +12,13 @@ async function listInvoices() {
   `;
 
 	return data;
+}
+
+async function userData() {
+  const data = await sql`
+    SELECT * FROM users`
+
+  return data;
 }
 
 export async function GET() {

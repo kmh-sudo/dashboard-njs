@@ -28,7 +28,7 @@ export default function Breadcrumbs({
             {index < breadcrumbs.length - 1 ? (
               <span className="mx-3 inline-block">/</span>
             ) : null}
-          </li>
+          </li> 
         ))}
       </ol>
     </nav>
