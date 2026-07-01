@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   title: 'Invoices',
 };
 
- 
 export default async function Page(props: {
     searchParams?: Promise<{
         query?: string;
